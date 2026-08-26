@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vinhomes Hải Vân Bay: Nhà Ở Dễ Dàng Cùng Liên</title>
 <meta name="description" content="Vinhomes Hải Vân Bay (Vinhomes Làng Vân), đô thị nghỉ dưỡng biển 512ha, 6km bờ biển tại chân đèo Hải Vân, Đà Nẵng. Liên Living tư vấn tận tâm, chọn đúng căn, đúng giá.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E4C47'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23E4CD98' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Vinhomes Hải Vân Bay: Nhà Ở Dễ Dàng Cùng Liên">
@@ -20,6 +21,27 @@
 <meta name="twitter:image" content="https://vinhomes-hai-van-bay-landing.myliennguyen2909.workers.dev/assets/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Nguyễn Mỹ Liên (Liên Living)",
+  "url": "https://vinhomes-hai-van-bay-landing.myliennguyen2909.workers.dev/",
+  "telephone": "+84987212223",
+  "areaServed": "Đà Nẵng, Việt Nam",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "366 - 2/9 Street, Hòa Cường",
+    "addressLocality": "Đà Nẵng",
+    "addressCountry": "VN"
+  },
+  "sameAs": [
+    "https://www.facebook.com/mylien.nguyen.37",
+    "https://www.tiktok.com/@lien.living",
+    "https://www.youtube.com/@lien.living"
+  ]
+}
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -135,7 +157,11 @@ a{text-decoration:none; color:inherit;}
 .nav-phone{ color:var(--white); font-weight:600; font-size:14.5px; transition:color .3s; display:none;}
 .nav.scrolled .nav-phone{ color:var(--teal-deep); }
 .nav .btn{ padding:11px 22px; font-size:13.5px; }
-@media(min-width:640px){ .nav-phone{ display:inline-flex; align-items:center; gap:6px;} }
+.nav-about{ color:rgba(255,255,255,0.9); font-weight:600; font-size:14px; transition:color .3s; display:none; }
+.nav.scrolled .nav-about{ color:var(--teal-deep); }
+.nav-about:hover{ color:var(--gold-light); }
+.nav.scrolled .nav-about:hover{ color:var(--gold); }
+@media(min-width:640px){ .nav-phone{ display:inline-flex; align-items:center; gap:6px;} .nav-about{ display:inline-flex; } }
 
 /* ---------- hero ---------- */
 .hero{
@@ -225,6 +251,11 @@ a{text-decoration:none; color:inherit;}
 }
 .khu-media.placeholder span.soon{ color:rgba(255,255,255,0.85); font-size:12.5px; letter-spacing:0.16em; text-transform:uppercase; font-weight:700;}
 .khu-media.placeholder svg{ width:46px; height:46px; opacity:0.85;}
+.khu-soon-badge{
+  position:absolute; top:16px; right:16px; padding:7px 14px; border-radius:999px; font-size:11px; font-weight:700;
+  letter-spacing:0.05em; text-transform:uppercase; color:var(--teal-deep);
+  background:linear-gradient(135deg,var(--gold-light),var(--gold)); box-shadow:0 8px 18px -6px rgba(0,0,0,0.35);
+}
 
 /* ---------- tien ich ---------- */
 .amenity{ background:var(--teal-deep); color:var(--white); }
@@ -261,6 +292,11 @@ a{text-decoration:none; color:inherit;}
 .progress-card .pbody .tag{ font-size:11.5px; color:var(--white); background:var(--teal); display:inline-block; padding:4px 12px; border-radius:999px; letter-spacing:0.05em; font-weight:700; margin-bottom:10px;}
 .progress-card .pbody h4{ font-size:19px; margin-bottom:6px; }
 .progress-card .pbody p{ font-size:14px; color:var(--muted); }
+.progress-list{ list-style:none; margin:12px 0 14px; display:flex; flex-direction:column; gap:7px; }
+.progress-list li{ font-size:13px; color:var(--ink); line-height:1.45; padding-left:14px; position:relative; }
+.progress-list li::before{ content:''; position:absolute; left:0; top:7px; width:5px; height:5px; border-radius:50%; background:var(--gold); }
+.progress-list li b{ color:var(--teal); font-weight:600; }
+.progress-amenity{ font-size:12.5px; color:var(--muted); border-top:1px solid var(--sand-deep); padding-top:12px; margin-top:2px; }
 .progress-note{ text-align:center; max-width:640px; margin:40px auto 0; color:var(--muted); font-size:15px; }
 
 /* ---------- san pham ---------- */
@@ -356,6 +392,7 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
 <nav class="nav" id="mainNav">
   <a href="#top" class="nav-logo">Liên <span>Living</span></a>
   <div class="nav-cta">
+    <a href="about.html" class="nav-about">Giới Thiệu</a>
     <a href="tel:0987212223" class="nav-phone">📞 0987 21 22 23</a>
     <button type="button" class="btn btn-gold" onclick="openLeadModal()">Liên Hệ Ngay</button>
   </div>
@@ -385,8 +422,8 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
           <select id="leadArea" name="leadArea">
             <option value="Chưa xác định">Chưa xác định, nhờ em Liên tư vấn</option>
             <option value="Bạch Vân">Bạch Vân</option>
-            <option value="Vịnh Mây">Vịnh Mây</option>
             <option value="Đảo Ngọc">Đảo Ngọc</option>
+            <option value="Vịnh Mây">Vịnh Mây (sắp mở bán)</option>
             <option value="Tinh Vân">Tinh Vân</option>
           </select>
         </div>
@@ -501,11 +538,11 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
         </div>
       </div>
       <div class="khu-card vinhmay">
-        <div class="khu-media"><span class="khu-tag">Vịnh Mây</span><img src="assets/vinhmay-villa.jpg" alt="Phân khu Vịnh Mây, phong cách Á Đông, sườn đồi ven biển" loading="lazy"></div>
+        <div class="khu-media"><span class="khu-tag">Vịnh Mây</span><span class="khu-soon-badge">Sắp Mở Bán</span><img src="assets/vinhmay-villa.jpg" alt="Phân khu Vịnh Mây, phong cách Á Đông, sườn đồi ven biển, sắp mở bán" loading="lazy"></div>
         <div class="khu-body">
           <div class="khu-style">Á Đông Yên Bình</div>
           <h3>Vịnh Mây</h3>
-          <p>Tựa lưng vào sườn đồi ven biển, kiến trúc Á Đông tinh tế mang lại cảm giác an yên. Đây là chốn lui về sau một ngày dài, nơi tốc độ sống chậm lại đúng nghĩa.</p>
+          <p>Tựa lưng vào sườn đồi ven biển, kiến trúc Á Đông tinh tế mang lại cảm giác an yên, chốn lui về sau một ngày dài, nơi tốc độ sống chậm lại đúng nghĩa. Hạ tầng đang gấp rút hoàn thiện, chuẩn bị chính thức mở bán, anh chị quan tâm nên đăng ký giữ suất ưu tiên từ bây giờ.</p>
         </div>
       </div>
       <div class="khu-card daongoc">
@@ -527,6 +564,35 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
           <h3>Tinh Vân</h3>
           <p>Bán đảo riêng biệt dành cho tầng lớp thượng lưu, đặc quyền giới hạn, thông tin mở bán sẽ được em Liên cập nhật sớm nhất đến anh chị.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="color:var(--sand)">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="currentColor" d="M0,30 C240,58 480,2 720,22 C960,42 1200,54 1440,20 L1440,60 L0,60 Z"></path></svg>
+</div>
+
+<!-- VINH MAY SAP MO BAN -->
+<section class="section locate" id="vinhmay-soon">
+  <div class="wrap">
+    <div class="locate-grid">
+      <div class="locate-copy">
+        <div class="eyebrow">Sắp Mở Bán</div>
+        <h2 style="font-size:clamp(28px,3.6vw,38px); margin-bottom:18px;">Vịnh Mây: Điểm Đến Tiếp Theo Tại Hải Vân Bay</h2>
+        <p>Sau Bạch Vân và Đảo Ngọc, phân khu Vịnh Mây tựa lưng sườn đồi, ôm trọn vịnh kín sóng, đang chuẩn bị chính thức mở bán. Ngay tại sự kiện "Sensory 2 - Khúc Giao Hòa" mới đây, CĐT cũng đã hé lộ thêm về dự án và định hướng chính sách cho giai đoạn mở bán tới. Đây là thời điểm để anh chị đăng ký sớm, giữ suất ưu tiên trước khi giỏ hàng và chính sách chính thức công bố.</p>
+        <ul class="locate-list">
+          <li><span class="ico">🏯</span> Kiến trúc Á Đông tinh tế, không gian sống chậm rãi và riêng tư</li>
+          <li><span class="ico">⛰️</span> Tựa lưng sườn đồi, mặt hướng vịnh kín sóng, được núi Hải Vân chắn gió tự nhiên</li>
+          <li><span class="ico">🚧</span> Hạ tầng đường nội khu và phân lô đã lộ rõ hình hài, đúng tiến độ cam kết</li>
+          <li><span class="ico">🔔</span> Chính sách bán hàng và giỏ hàng dự kiến công bố trong các đợt mở bán sắp tới</li>
+        </ul>
+        <div style="margin-top:28px;">
+          <button type="button" class="btn btn-gold" onclick="openLeadModal('Vịnh Mây')">📩 Đăng Ký Nhận Ưu Tiên Mở Bán Vịnh Mây</button>
+        </div>
+      </div>
+      <div class="locate-img">
+        <img src="assets/hatang-vinhmay.jpg" alt="Tiến độ hạ tầng khu Vịnh Mây, chuẩn bị mở bán" loading="lazy">
       </div>
     </div>
   </div>
@@ -569,25 +635,57 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
 <section class="section" id="tiendo">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow" style="justify-content:center;">Tiến Độ Thực Tế</div>
-      <h2>Không Chỉ Là Bản Vẽ: Đang Thành Hình Từng Ngày</h2>
-      <p>Đây là hình ảnh công trường thực tế em Liên trực tiếp cập nhật, không phải phối cảnh, để anh chị an tâm xuống tiền vào một dự án đang triển khai thật.</p>
+      <div class="eyebrow" style="justify-content:center;">Cập Nhật Tiến Độ Tháng 8/2026</div>
+      <h2>Tiến Độ Bàn Giao Từng Phần: Đại Đô Thị Bên Vịnh Tăng Tốc</h2>
+      <p>Bạch Vân, Vịnh Mây, Đảo Ngọc đang đồng loạt triển khai nhà ở và hệ tiện ích trọng điểm. Từng mảnh ghép dần thành hình, em Liên cập nhật đúng mốc thời gian CĐT vừa công bố để anh chị an tâm theo dõi.</p>
     </div>
     <div class="progress-strip">
       <div class="progress-card">
-        <div class="pimg"><img src="assets/hatang-bachvan.jpg" alt="Tiến độ Đại lộ Bạch Vân tháng 6/2026" loading="lazy"></div>
-        <div class="pbody"><span class="tag">Cập nhật 06/2026</span><h4>Đại Lộ Bạch Vân</h4><p>Trục đường chính đã thành hình, vỉa hè và hạ tầng ven biển đang gấp rút hoàn thiện.</p></div>
+        <div class="pimg"><img src="assets/hatang-bachvan.jpg" alt="Tiến độ khu Bạch Vân tháng 8/2026" loading="lazy"></div>
+        <div class="pbody">
+          <span class="tag">Bạch Vân · ~112ha</span>
+          <h4>Tâm Điểm Sống &amp; Thương Mại</h4>
+          <ul class="progress-list">
+            <li><b>345 căn xây bàn giao thô:</b> dự kiến Q4/2026</li>
+            <li><b>02 tòa chung cư CT-02:</b> dự kiến Q4/2027</li>
+            <li><b>2.177 căn giãn xây 18T:</b> dự kiến Q2 - Q4/2028</li>
+            <li><b>Cầu Ánh Sao:</b> hoàn thành T6/2026</li>
+            <li><b>Cầu Suối Lương:</b> hoàn thành T7/2026</li>
+            <li><b>Tổ hợp giải trí &amp; ẩm thực:</b> dự kiến T8/2028</li>
+          </ul>
+          <p class="progress-amenity">Cùng chuỗi tiện ích Suối Ngọc Thạch ~1,5km, Activia Park 1,2ha, Vườn nướng Mỹ Vị 5.600m², Hải Vân Market, Làng Ẩm thực ven suối, Peninsula Park.</p>
+        </div>
       </div>
       <div class="progress-card">
-        <div class="pimg"><img src="assets/hatang-vinhmay.jpg" alt="Tiến độ san lấp hạ tầng khu Vịnh Mây" loading="lazy"></div>
-        <div class="pbody"><span class="tag">Đang triển khai</span><h4>Khu Vịnh Mây</h4><p>Hệ thống đường nội khu và phân lô đã rõ hình hài dọc theo vịnh biển kín sóng.</p></div>
+        <div class="pimg"><img src="assets/hatang-vinhmay.jpg" alt="Tiến độ khu Vịnh Mây tháng 8/2026, sắp mở bán" loading="lazy"></div>
+        <div class="pbody">
+          <span class="tag">Vịnh Mây · 99,6ha</span>
+          <h4>Miền Dinh Cư Trên Cao Hướng Vịnh</h4>
+          <ul class="progress-list">
+            <li><b>02 căn nhà mẫu:</b> dự kiến Q3/2026</li>
+            <li><b>Các căn xây thô:</b> dự kiến Q4/2026 - Q1/2027</li>
+            <li><b>Spa - Wellness - phòng khám Vinmec:</b> dự kiến T3/2028</li>
+            <li><b>Các căn giãn xây 24T:</b> dự kiến Q1/2029</li>
+          </ul>
+          <p class="progress-amenity">Các lớp dinh cư trải theo cao độ tự nhiên ~4,8 - 187,5m, nổi bật với Oceania Clubhouse 6.500m², Palm Garden 6.200m², Malibu Wellness Hub 1,6ha.</p>
+        </div>
       </div>
       <div class="progress-card">
-        <div class="pimg"><img src="assets/hatang-daongoc.jpg" alt="Tiến độ hạ tầng khu Đảo Ngọc ven biển" loading="lazy"></div>
-        <div class="pbody"><span class="tag">Đang triển khai</span><h4>Khu Đảo Ngọc</h4><p>Tuyến ven biển và nền các phân khu đã sẵn sàng, đúng tiến độ bàn giao đã cam kết.</p></div>
+        <div class="pimg"><img src="assets/hatang-daongoc.jpg" alt="Tiến độ khu Đảo Ngọc tháng 8/2026" loading="lazy"></div>
+        <div class="pbody">
+          <span class="tag">Đảo Ngọc · ~138,8ha</span>
+          <h4>Tâm Điểm Vui Chơi &amp; Nghỉ Dưỡng</h4>
+          <ul class="progress-list">
+            <li><b>Emerald Boulevard ~1,3km:</b> dự kiến T10/2026</li>
+            <li><b>Công viên Đảo Ngọc &amp; Công viên Bách Thảo:</b> dự kiến T8/2027</li>
+            <li><b>Vinpearl LegendLux 4,6ha:</b> hoàn thành T10/2027, dự kiến khai trương T11/2027</li>
+            <li><b>Kids World 15ha:</b> dự kiến T11/2027</li>
+            <li><b>Khu vận động - khám phá 207ha:</b> dự kiến T3/2028</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <p class="progress-note">📌 Hình ảnh do em Liên cập nhật trực tiếp từ công trường. Anh chị cần thêm hình ảnh, video mới nhất cứ nhắn em nhé.</p>
+    <p class="progress-note">📌 Mốc thời gian theo cập nhật tiến độ CĐT công bố tháng 8/2026, có thể điều chỉnh theo tình hình triển khai thực tế. Anh chị cần thêm hình ảnh, video công trường mới nhất cứ nhắn em Liên nhé.</p>
   </div>
 </section>
 
@@ -653,23 +751,23 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
 <section class="section promo" id="uudai">
   <div class="wrap">
     <div class="section-head light">
-      <div class="eyebrow" style="justify-content:center;">Chính Sách Ưu Đãi</div>
-      <h2>Chính Sách Đang Áp Dụng: Quỹ Ưu Đãi Có Hạn</h2>
-      <p style="color:rgba(255,255,255,0.85);">Nhiều chính sách chồng ưu đãi đang chạy song song, nhưng mốc thời gian sẽ thay đổi liên tục theo đợt mở bán.</p>
+      <div class="eyebrow" style="justify-content:center;">Chính Sách Cập Nhật Tháng 8/2026</div>
+      <h2>Ưu Đãi Chồng Ưu Đãi Cho Đảo Ngọc &amp; Bạch Vân</h2>
+      <p style="color:rgba(255,255,255,0.85);">Chính sách bán hàng mới nhất do CĐT ban hành, áp dụng cho Đảo Ngọc (khu hoàn thiện nội thất) và Bạch Vân, cộng thêm chính sách bổ sung riêng cho giai đoạn hiện tại. Số liệu chi tiết theo từng căn, em Liên tư vấn riêng khi anh chị để lại thông tin nhé.</p>
     </div>
     <div class="promo-grid">
-      <div class="promo-chip"><div class="num">1</div><p><b>Chiết khấu 1%</b> cho khách mua căn thứ 2</p></div>
-      <div class="promo-chip"><div class="num">2</div><p><b>Chiết khấu 1%</b> tiên phong đặt cọc sớm</p></div>
-      <div class="promo-chip"><div class="num">3</div><p><b>Chiết khấu 1%</b> dành riêng khách Đà Nẵng / Huế</p></div>
-      <div class="promo-chip"><div class="num">4</div><p><b>Chiết khấu 9%</b> thanh toán sớm (sau 20/7 chỉ còn 7.5%)</p></div>
-      <div class="promo-chip"><div class="num">5</div><p><b>Hỗ trợ lãi suất</b> lên đến 5 năm</p></div>
-      <div class="promo-chip"><div class="num">6</div><p><b>Ưu đãi lên đến 100 triệu đồng</b> cho khách hàng đủ điều kiện</p></div>
-      <div class="promo-chip"><div class="num">7</div><p>Tặng gói <b>quản lý nhà ở 2 năm</b></p></div>
-      <div class="promo-chip"><div class="num">8</div><p>Voucher <b>Vinmec / Vinpearl</b> giá trị</p></div>
-      <div class="promo-chip"><div class="num">9</div><p>Ưu đãi <b>Vinclub lên tới 0.9%</b></p></div>
+      <div class="promo-chip"><div class="num">1</div><p><b>Cam kết thuê 21% trong 3 năm</b> (~7%/năm), Vinpearl quản lý vận hành - áp dụng Đảo Ngọc hoàn thiện nội thất</p></div>
+      <div class="promo-chip"><div class="num">2</div><p><b>Hỗ trợ vay tới 80%</b> dành riêng cho căn giãn xây, thanh toán giãn linh hoạt 24 - 36 tháng</p></div>
+      <div class="promo-chip"><div class="num">3</div><p><b>Chiết khấu thanh toán sớm</b> hấp dẫn, đang áp dụng riêng cho giai đoạn khuyến mãi hiện tại</p></div>
+      <div class="promo-chip"><div class="num">4</div><p><b>Quà tặng giá trị</b> chiết khấu trực tiếp vào giá, mức ưu đãi theo giá trị căn</p></div>
+      <div class="promo-chip"><div class="num">5</div><p>Chiết khấu <b>1%</b> tiên phong, <b>1%</b> khách cư dân Vinhomes và <b>1%</b> mua thêm từ căn thứ 2</p></div>
+      <div class="promo-chip"><div class="num">6</div><p>Bạch Vân: chương trình <b>"Về Ở Sớm"</b> chiết khấu 10% cho căn thô</p></div>
+      <div class="promo-chip"><div class="num">7</div><p>Miễn phí <b>quản lý vận hành 2 năm</b> mỗi căn</p></div>
+      <div class="promo-chip"><div class="num">8</div><p>Voucher <b>Vinmec 100 triệu</b> hoặc kỳ nghỉ dưỡng <b>Vinpearl 5 đêm</b></p></div>
+      <div class="promo-chip"><div class="num">9</div><p>Voucher <b>Đặc quyền sở hữu nhà Vinhomes</b>, hiệu lực đến 31/12/2026 &middot; Ưu đãi Vinclub tới 0,9%</p></div>
     </div>
     <div class="promo-urgency">
-      <p>🔥 Quỹ căn đẹp <b>đang giới hạn</b> theo từng đợt mở bán. Mốc chiết khấu 9% cũng chỉ còn áp dụng đến trước 20/7. Anh chị đang cân nhắc thì đừng chần chừ quá lâu, để lỡ chính sách tốt thì tiếc lắm nhé.</p>
+      <p>🔥 Chính sách bổ sung của giai đoạn hiện tại chỉ áp dụng cho khách <b>ký tài liệu giao dịch đầu tiên trong một khung thời gian giới hạn</b>, cộng thêm vào chính sách nền Đảo Ngọc/Bạch Vân. Quỹ căn đẹp cũng đang giới hạn theo từng đợt mở bán. Anh chị đang cân nhắc thì nhắn em Liên ngay để được chốt đúng chính sách còn hiệu lực, kẻo lỡ là tiếc lắm nhé.</p>
     </div>
   </div>
 </section>
@@ -687,6 +785,7 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
         <h3>Nguyễn Mỹ Liên</h3>
         <div class="role">Liên Living · Home Plus</div>
         <div class="slogan">"Nhà ở dễ dàng cùng Liên"</div>
+        <a href="about.html" style="display:inline-block; margin-top:14px; font-size:13.5px; font-weight:600; color:var(--teal); border-bottom:1px solid var(--gold);">Xem hành trình của Liên →</a>
       </div>
       <div class="cta-actions">
         <p class="lead">Biển đẹp thì Vinhomes Hải Vân Bay có sẵn, còn <b>chọn đúng căn, đúng giá, đúng thời điểm</b> thì để em Liên lo. Anh chị để lại số hoặc nhắn Zalo, em tư vấn kỹ càng, không hối thúc, không tạo áp lực nhé.</p>
@@ -720,6 +819,7 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
         </div>
         <div>
           <h5>Kênh Chính Thức</h5>
+          <a href="about.html">Giới thiệu về Liên Living</a>
           <a href="https://www.facebook.com/mylien.nguyen.37" target="_blank">Facebook cá nhân</a>
           <a href="https://www.tiktok.com/@lien.living" target="_blank">TikTok @lien.living</a>
           <a href="https://www.youtube.com/@lien.living" target="_blank">YouTube @lien.living</a>
@@ -755,10 +855,11 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
   const leadFormWrap = document.getElementById('leadFormWrap');
   const leadThanks = document.getElementById('leadThanks');
 
-  function openLeadModal() {
+  function openLeadModal(presetArea) {
     leadFormWrap.style.display = 'block';
     leadThanks.style.display = 'none';
     document.getElementById('leadForm').reset();
+    if (presetArea) { document.getElementById('leadArea').value = presetArea; }
     leadOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
