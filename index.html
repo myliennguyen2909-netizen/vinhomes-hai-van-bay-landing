@@ -223,6 +223,22 @@ a{text-decoration:none; color:inherit;}
 .locate-list .ico{ flex:none; width:38px; height:38px; border-radius:50%; background:var(--white); display:flex; align-items:center; justify-content:center; color:var(--teal); font-size:17px; box-shadow:0 6px 16px rgba(14,76,71,0.12);}
 .locate-img{ border-radius:24px; overflow:hidden; box-shadow:var(--shadow); }
 
+/* ---------- vinh may price + policy ---------- */
+.vm-price-grid{ display:grid; gap:18px; grid-template-columns:1fr; margin-top:44px; }
+@media(min-width:700px){ .vm-price-grid{ grid-template-columns:repeat(3,1fr); } }
+.vm-price-card{ background:var(--white); border-radius:22px; padding:26px 22px; text-align:center; box-shadow:0 18px 36px -20px rgba(14,76,71,0.25); }
+.vm-price-card .pc-icon{ font-size:24px; margin-bottom:10px; }
+.vm-price-card h4{ font-size:19px; margin-bottom:6px; }
+.vm-price-card .spec{ font-size:12.5px; color:var(--muted); margin-bottom:12px; }
+.vm-price-card .price{ font-family:'Cormorant Garamond',serif; font-size:27px; color:var(--teal); font-weight:700; }
+.vm-price-card .price small{ font-family:'Inter',sans-serif; font-size:12px; color:var(--muted); font-weight:500; display:block; margin-top:2px; }
+.vm-policy-grid{ display:grid; gap:12px; grid-template-columns:1fr; margin-top:20px; }
+@media(min-width:640px){ .vm-policy-grid{ grid-template-columns:repeat(2,1fr); } }
+.vm-policy-item{ display:flex; gap:12px; align-items:flex-start; background:var(--white); border:1px solid var(--sand-deep); border-radius:16px; padding:14px 16px; font-size:14px; color:var(--ink); line-height:1.5; }
+.vm-policy-item .ico{ flex:none; font-size:16px; }
+.vm-policy-item b{ color:var(--teal); }
+.vm-note{ text-align:center; max-width:680px; margin:24px auto 0; color:var(--muted); font-size:12.5px; }
+
 /* ---------- phan khu cards ---------- */
 .khu-grid{ display:grid; gap:28px; grid-template-columns:1fr; }
 @media(min-width:700px){ .khu-grid{ grid-template-columns:repeat(2,1fr);} }
@@ -579,13 +595,13 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
     <div class="locate-grid">
       <div class="locate-copy">
         <div class="eyebrow">Sắp Mở Bán</div>
-        <h2 style="font-size:clamp(28px,3.6vw,38px); margin-bottom:18px;">Vịnh Mây: Điểm Đến Tiếp Theo Tại Hải Vân Bay</h2>
-        <p>Sau Bạch Vân và Đảo Ngọc, phân khu Vịnh Mây tựa lưng sườn đồi, ôm trọn vịnh kín sóng, đang chuẩn bị chính thức mở bán. Ngay tại sự kiện "Sensory 2 - Khúc Giao Hòa" mới đây, CĐT cũng đã hé lộ thêm về dự án và định hướng chính sách cho giai đoạn mở bán tới. Đây là thời điểm để anh chị đăng ký sớm, giữ suất ưu tiên trước khi giỏ hàng và chính sách chính thức công bố.</p>
+        <h2 style="font-size:clamp(28px,3.6vw,38px); margin-bottom:18px;">Vịnh Mây: Đã Có Giá Bán &amp; Chính Sách Dự Kiến</h2>
+        <p>Sau Bạch Vân và Đảo Ngọc, phân khu Vịnh Mây tựa lưng sườn đồi, ôm trọn vịnh kín sóng, đang chuẩn bị chính thức mở bán. CĐT vừa công bố giá bán và chính sách bán hàng dự kiến, em Liên cập nhật ngay bên dưới để anh chị nắm trước, tránh bỏ lỡ suất đẹp khi giỏ hàng chính thức mở.</p>
         <ul class="locate-list">
           <li><span class="ico">🏯</span> Kiến trúc Á Đông tinh tế, không gian sống chậm rãi và riêng tư</li>
           <li><span class="ico">⛰️</span> Tựa lưng sườn đồi, mặt hướng vịnh kín sóng, được núi Hải Vân chắn gió tự nhiên</li>
           <li><span class="ico">🚧</span> Hạ tầng đường nội khu và phân lô đã lộ rõ hình hài, đúng tiến độ cam kết</li>
-          <li><span class="ico">🔔</span> Chính sách bán hàng và giỏ hàng dự kiến công bố trong các đợt mở bán sắp tới</li>
+          <li><span class="ico">💰</span> Giá bán và chính sách bán hàng dự kiến đã công bố, chi tiết ngay bên dưới</li>
         </ul>
         <div style="margin-top:28px;">
           <button type="button" class="btn btn-gold" onclick="openLeadModal('Vịnh Mây')">📩 Đăng Ký Nhận Ưu Tiên Mở Bán Vịnh Mây</button>
@@ -595,6 +611,40 @@ footer{ background:var(--teal-deep); color:rgba(255,255,255,0.7); padding:52px 0
         <img src="assets/hatang-vinhmay.jpg" alt="Tiến độ hạ tầng khu Vịnh Mây, chuẩn bị mở bán" loading="lazy">
       </div>
     </div>
+
+    <div class="vm-price-grid">
+      <div class="vm-price-card">
+        <div class="pc-icon">🌊</div>
+        <h4>Đơn Lập - View Biển</h4>
+        <div class="spec">256 - 344 m² đất / căn</div>
+        <div class="price">Từ 32,1 tỷ<small>Giá đất &amp; giá trị thương mại, dự kiến</small></div>
+      </div>
+      <div class="vm-price-card">
+        <div class="pc-icon">🏡</div>
+        <h4>Đơn Lập - View Thường</h4>
+        <div class="spec">251 - 418 m² đất / căn</div>
+        <div class="price">Từ 12 tỷ<small>Giá đất &amp; giá trị thương mại, dự kiến</small></div>
+      </div>
+      <div class="vm-price-card">
+        <div class="pc-icon">🏠</div>
+        <h4>Liền Kề</h4>
+        <div class="spec">70 - 80 m² đất / căn</div>
+        <div class="price">Từ 3,7 tỷ<small>Giá đất &amp; giá trị thương mại, dự kiến</small></div>
+      </div>
+    </div>
+
+    <div class="vm-policy-grid">
+      <div class="vm-policy-item"><span class="ico">🛡️</span> <span><b>Đảm bảo lãi suất</b> tối đa 9%/năm trong 24 tháng (áp dụng KH chọn phương án vay HTLS)</span></div>
+      <div class="vm-policy-item"><span class="ico">💸</span> <span><b>Chiết khấu thanh toán sớm</b> tới 9% từ giá gốc</span></div>
+      <div class="vm-policy-item"><span class="ico">🏦</span> <span><b>Hỗ trợ vay tới 80%</b>, dành riêng cho dòng sản phẩm thô giãn xây</span></div>
+      <div class="vm-policy-item"><span class="ico">🔑</span> <span>Miễn phí <b>gói quản lý nhà ở 24 tháng</b></span></div>
+      <div class="vm-policy-item"><span class="ico">🎟️</span> <span>Voucher <b>Đặc quyền sở hữu nhà Vinhomes</b>, không vượt quá 30% giá trị BĐS</span></div>
+      <div class="vm-policy-item"><span class="ico">🤝</span> <span>Chính sách người giới thiệu, thưởng <b>1,5%</b> giá trị căn mới</span></div>
+      <div class="vm-policy-item"><span class="ico">🏝️</span> <span>Voucher <b>Aquafield 20 triệu/căn</b>, áp dụng 500 căn ký cọc/ký quỹ đầu tiên</span></div>
+      <div class="vm-policy-item"><span class="ico">🎁</span> <span>1 Voucher <b>Vinmec 100 triệu</b> hoặc <b>Vinpearl nghỉ dưỡng 5 đêm</b></span></div>
+      <div class="vm-policy-item"><span class="ico">🚗</span> <span>Cơ hội bốc thăm trúng xe <b>VinFast VF9</b></span></div>
+    </div>
+    <p class="vm-note">*Giá bán và chính sách trên là dự kiến, giá bán chính thức và điều kiện áp dụng cụ thể sẽ theo công bố chính thức của CĐT tại từng thời điểm. Anh chị để lại thông tin, em Liên tư vấn chi tiết theo đúng nhu cầu nhé.</p>
   </div>
 </section>
 
