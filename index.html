@@ -4,9 +4,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
 
   :root{
-    --ink:#0E2A32;
-    --bay:#145865;
-    --bay-2:#1F7A86;
+    --ink:#0B2A4A;
+    --bay:#0B3A5A;
+    --bay-2:#0EA99B;
+    --teal:#0EA99B;
+    --teal-strong:#0B8478;
+    --teal-soft:#E1F4F1;
     --gold:#A9782E;
     --gold-strong:#8C6425;
     --gold-soft:#EBDBB8;
@@ -16,13 +19,16 @@
     --text:#16232A;
     --text-soft:#516164;
     --line:#D4DEDB;
-    --shadow: 0 18px 40px -22px rgba(14,42,50,0.35);
+    --shadow: 0 18px 40px -22px rgba(11,42,74,0.28);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --ink:#08161B;
-      --bay:#4FA7AE;
-      --bay-2:#3C8B93;
+      --ink:#081824;
+      --bay:#4FC2B4;
+      --bay-2:#3CA69A;
+      --teal:#3CD9C7;
+      --teal-strong:#2BB0A1;
+      --teal-soft:#0E2E2A;
       --gold:#D9A94B;
       --gold-strong:#E8C376;
       --gold-soft:#3A2F17;
@@ -36,9 +42,12 @@
     }
   }
   :root[data-theme="dark"]{
-    --ink:#08161B;
-    --bay:#4FA7AE;
-    --bay-2:#3C8B93;
+    --ink:#081824;
+    --bay:#4FC2B4;
+    --bay-2:#3CA69A;
+    --teal:#3CD9C7;
+    --teal-strong:#2BB0A1;
+    --teal-soft:#0E2E2A;
     --gold:#D9A94B;
     --gold-strong:#E8C376;
     --gold-soft:#3A2F17;
@@ -114,6 +123,8 @@
   }
   .btn-gold{background:var(--gold); color:var(--ink);}
   .btn-gold:hover, .btn-gold:focus-visible{background:var(--gold-strong);}
+  .btn-teal{background:var(--teal); color:#fff;}
+  .btn-teal:hover, .btn-teal:focus-visible{background:var(--teal-strong);}
   .btn-line{border-color:var(--line); color:var(--text);}
   .btn-line:hover, .btn-line:focus-visible{border-color:var(--bay); color:var(--bay);}
   .btn-zalo{background:#0068FF; color:#fff;}
@@ -369,6 +380,43 @@
   .contact .btn-line{border-color:rgba(234,242,239,0.3); color:#EAF2EF;}
   footer{padding-block:36px; color:var(--text-soft); font-size:0.8rem; display:flex; flex-direction:column; gap:6px;}
   footer a{color:var(--bay); text-decoration:underline;}
+
+  /* ---------- Policy teaser ---------- */
+  .policy-band{
+    background:var(--ink); color:#EAF2EF; border-radius:22px; padding:34px 36px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .policy-band .ptext{max-width:60ch;}
+  .policy-band .eyebrow{color:var(--teal);}
+  .policy-band h2{color:#FBF8F1; font-size:1.5rem; margin-top:6px;}
+  .policy-band p{color:#9FB6B0; margin-top:8px; font-size:0.94rem;}
+  .policy-band .actions{display:flex; gap:10px; flex-wrap:wrap;}
+
+  /* ---------- Highlights ---------- */
+  .highlights{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px;}
+  .highlights li{display:flex; gap:14px; padding:22px; align-items:flex-start;}
+  .highlights .hnum{
+    flex:none; width:34px; height:34px; border-radius:50%; background:var(--teal-soft); color:var(--teal-strong);
+    display:flex; align-items:center; justify-content:center; font-family:"Fraunces",serif; font-weight:700; font-size:0.98rem;
+  }
+  .highlights h3{font-size:1rem; font-family:"Be Vietnam Pro",sans-serif; font-weight:700;}
+  .highlights p{margin:6px 0 0; color:var(--text-soft); font-size:0.9rem;}
+
+  /* ---------- Zone style tag ---------- */
+  .zone .style-tag{font-size:0.78rem; color:var(--text-soft); font-style:italic; margin-top:-4px;}
+
+  /* ---------- FAQ ---------- */
+  .faq{display:flex; flex-direction:column; gap:12px;}
+  .faq details{
+    border:1px solid var(--line); border-radius:14px; background:var(--surface); padding:18px 22px;
+  }
+  .faq summary{
+    font-weight:700; cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:12px;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+"; font-size:1.3rem; color:var(--teal-strong); flex:none; transition:transform .2s;}
+  .faq details[open] summary::after{content:"–";}
+  .faq p{margin:12px 0 0; color:var(--text-soft); font-size:0.94rem;}
 </style>
 
 <header>
@@ -379,9 +427,10 @@
       <a href="#phankhu">Phân khu</a>
       <a href="#vinhmay">Vịnh Mây</a>
       <a href="#tienich">Tiện ích</a>
+      <a href="#faq">FAQ</a>
       <a href="#lien">Về Liên</a>
     </nav>
-    <a class="btn btn-gold" href="tel:0987212223">Tư vấn 0987 21 22 23</a>
+    <a class="btn btn-teal" href="tel:0987212223">Tư vấn 0987 21 22 23</a>
   </div>
 </header>
 
@@ -396,7 +445,7 @@
     <h1>Nơi con đèo huyền thoại gặp biển</h1>
     <p class="lede">Đại đô thị nghỉ dưỡng biển vịnh khép kín của Vingroup tại chân đèo Hải Vân — mô hình "All-in-One" hợp nhất nhà ở, nghỉ dưỡng, thương mại và giải trí trên quy mô 512,16 ha.</p>
     <div class="hero-cta">
-      <a class="btn btn-gold" href="tel:0987212223">Nhận bảng giá Vịnh Mây</a>
+      <a class="btn btn-teal" href="tel:0987212223">Nhận bảng giá Vịnh Mây</a>
       <a class="btn btn-zalo" href="https://zalo.me/0987212223" target="_blank" rel="noopener">Chat Zalo với Liên</a>
       <a class="btn btn-line" href="#phankhu">Khám phá 4 phân khu</a>
     </div>
@@ -411,6 +460,20 @@
 
 <div class="wrap">
 
+<section id="chinhsach" style="padding-block:32px;">
+  <div class="policy-band">
+    <div class="ptext">
+      <p class="eyebrow">Chính sách bán hàng</p>
+      <h2>Ưu đãi & chính sách được cập nhật liên tục</h2>
+      <p>Chủ đầu tư điều chỉnh chiết khấu, hỗ trợ lãi suất và quà tặng theo từng đợt mở bán — đặc biệt là giai đoạn ra hàng sắp tới của Vịnh Mây. Liên trực tiếp cập nhật bảng tính chi tiết theo từng căn, gửi ngay khi bạn liên hệ.</p>
+    </div>
+    <div class="actions">
+      <a class="btn btn-teal" href="tel:0987212223">Nhận chính sách mới nhất</a>
+      <a class="btn btn-zalo" href="https://zalo.me/0987212223" target="_blank" rel="noopener">Nhắn Zalo</a>
+    </div>
+  </div>
+</section>
+
 <section id="lien">
   <div class="section-head">
     <p class="eyebrow">Người đồng hành cùng bạn</p>
@@ -424,7 +487,7 @@
       <h3 class="agent-name">Nguyễn Thị Mỹ Liên</h3>
       <p class="agent-bio">Am hiểu sâu sắc quỹ căn, chính sách và tiến độ dự án, Liên đồng hành cùng khách hàng trọn hành trình — từ khảo sát thực địa, hoạch định tài chính đến hoàn tất pháp lý, và hỗ trợ vận hành khai thác lưu trú sau khi nhận nhà tại Vinhomes Hải Vân Bay.</p>
       <div class="agent-cta">
-        <a class="btn btn-gold" href="tel:0987212223">☎ Gọi trực tiếp · 0987 21 22 23</a>
+        <a class="btn btn-teal" href="tel:0987212223">☎ Gọi trực tiếp · 0987 21 22 23</a>
         <a class="btn btn-zalo" href="https://zalo.me/0987212223" target="_blank" rel="noopener">💬 Nhắn Zalo</a>
       </div>
       <div class="social-row">
@@ -455,6 +518,21 @@
       <div class="fact-row"><dt>Bàn giao dự kiến</dt><dd class="tabular">Quý 4/2027</dd></div>
     </dl>
   </div>
+</section>
+
+<section id="diemnhan">
+  <div class="section-head">
+    <p class="eyebrow">Vì sao chọn Vinhomes Hải Vân Bay</p>
+    <h2>6 điểm nhấn đầu tư</h2>
+  </div>
+  <ul class="highlights">
+    <li><span class="hnum">1</span><div><h3>Quỹ đất hiếm ven biển</h3><p>512,16 ha đất biển hiếm có tại Đà Nẵng, thế đất "tựa sơn hướng hải" — lưng dựa đèo Hải Vân, mặt hướng vịnh.</p></div></li>
+    <li><span class="hnum">2</span><div><h3>Tâm điểm hành lang tăng trưởng</h3><p>Vị trí chiến lược tại cửa ngõ Tây Bắc Đà Nẵng, liền kề Cảng Liên Chiểu và Khu thương mại tự do (FTZ).</p></div></li>
+    <li><span class="hnum">3</span><div><h3>Hành lang di sản miền Trung</h3><p>Kết nối trực tiếp trục di sản UNESCO Huế – Đà Nẵng – Hội An qua đèo Hải Vân.</p></div></li>
+    <li><span class="hnum">4</span><div><h3>Đô thị "All-in-One"</h3><p>Tích hợp đầy đủ nhà ở, nghỉ dưỡng, tiện ích thể thao – giải trí và thương mại ngay trong nội khu.</p></div></li>
+    <li><span class="hnum">5</span><div><h3>Pháp lý an tâm</h3><p>Sổ đỏ lâu dài cho toàn bộ sản phẩm thấp tầng, minh bạch từ khi mở bán.</p></div></li>
+    <li><span class="hnum">6</span><div><h3>Hệ sinh thái Vingroup</h3><p>Phát triển bởi Vinhomes, thừa hưởng hệ sinh thái Vinpearl, Vinschool, Vinmec, VinWonders.</p></div></li>
+  </ul>
 </section>
 
 <section id="vitri">
@@ -492,6 +570,7 @@
       <div class="zone-body">
         <span class="tag">Phân khu</span>
         <h3>Bạch Vân</h3>
+        <p class="style-tag">Lấy cảm hứng từ Vịnh Victoria — Hồng Kông</p>
         <div class="metric tabular">2.524 căn</div>
         <p>Nhà thấp tầng kết hợp 6 tòa căn hộ, phân khu quy mô lớn nhất về số lượng sản phẩm.</p>
       </div>
@@ -501,6 +580,7 @@
       <div class="zone-body">
         <span class="tag">Phân khu</span>
         <h3>Đảo Ngọc</h3>
+        <p class="style-tag">Lấy cảm hứng từ Costa Smeralda — Ý</p>
         <div class="metric tabular">2.376 căn</div>
         <p>Diện tích 138,84 ha, quy hoạch dạng đảo trong lòng vịnh.</p>
       </div>
@@ -510,6 +590,7 @@
       <div class="zone-body">
         <span class="tag tag-soon">Sắp mở bán</span>
         <h3>Vịnh Mây</h3>
+        <p class="style-tag">Lấy cảm hứng từ Malibu — Mỹ</p>
         <div class="metric tabular">689 căn</div>
         <p>Diện tích 99,59 ha, gồm biệt thự và nhà liền kề hướng cảnh núi – vịnh.</p>
         <a class="zone-link" href="#vinhmay">Xem chi tiết & đăng ký sớm →</a>
@@ -520,6 +601,7 @@
       <div class="zone-body">
         <span class="tag">Phân khu</span>
         <h3>Tinh Vân</h3>
+        <p class="style-tag">Lấy cảm hứng từ Nhật Bản</p>
         <div class="metric tabular">—</div>
         <p>Phân khu thứ tư của dự án, thông tin chi tiết đang được chủ đầu tư cập nhật.</p>
       </div>
@@ -556,7 +638,7 @@
       <div class="spotlight-cta">
         <p>Chính sách bán hàng, giỏ hàng và bảng giá chính thức của Vịnh Mây sẽ được cập nhật ngay khi chủ đầu tư công bố. Để lại thông tin với Liên để được ưu tiên giữ chỗ và nhận thông báo sớm nhất.</p>
         <div class="actions">
-          <a class="btn btn-gold" href="tel:0987212223">Đăng ký giữ chỗ sớm</a>
+          <a class="btn btn-teal" href="tel:0987212223">Đăng ký giữ chỗ sớm</a>
           <a class="btn btn-zalo" href="https://zalo.me/0987212223" target="_blank" rel="noopener">Nhắn Zalo cho Liên</a>
         </div>
       </div>
@@ -575,28 +657,28 @@
       <div class="amen-media"><img src="assets/amen-plaza.jpg" alt="Quảng trường bờ biển Vinhomes Hải Vân Bay lúc hoàng hôn"></div>
       <div class="amen-body">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><path d="M3 12c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/></svg>
-        <div><h3>Quảng trường & bờ biển</h3><p>Không gian công cộng ven vịnh, quảng trường biển trung tâm.</p></div>
+        <div><h3>Phố đi bộ Emerald Boulevard</h3><p>Tuyến phố đi bộ bờ biển dài 1,3 km, không gian công cộng ven vịnh.</p></div>
       </div>
     </div>
     <div class="panel amen">
       <div class="amen-media"><img src="assets/daongoc-zone.jpg" alt="VinWonders Hải Vân Bay — công viên chủ đề lớn nhất Đông Nam Á"></div>
       <div class="amen-body">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M6 6l12 12M18 6L6 18"/></svg>
-        <div><h3>VinWonders Hải Vân Bay</h3><p>Công viên thể thao – giải trí quy mô 225 ha.</p></div>
+        <div><h3>VinWonders Hải Vân Bay</h3><p>Tổ hợp công viên chủ đề & vận động mạo hiểm quy mô 24,8 ha.</p></div>
       </div>
     </div>
     <div class="panel amen">
       <div class="amen-media"><img src="assets/amen-green.jpg" alt="Trẻ nhỏ vui chơi tại lõi sinh thái xanh Vinhomes Hải Vân Bay"></div>
       <div class="amen-body">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C9 6 6 9 6 13a6 6 0 0 0 12 0c0-4-3-7-6-11Z"/></svg>
-        <div><h3>Lõi sinh thái xanh</h3><p>Vùng lõi cảnh quan tự nhiên rộng 8 ha giữa lòng dự án.</p></div>
+        <div><h3>Botanica Park — Công viên Bách Thảo</h3><p>Vùng lõi cảnh quan tự nhiên rộng 8 ha giữa lòng dự án.</p></div>
       </div>
     </div>
     <div class="panel amen">
       <div class="amen-media"><img src="assets/amen-pool.jpg" alt="Bể bơi tiện ích nội khu Vinhomes Hải Vân Bay"></div>
       <div class="amen-body">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
-        <div><h3>Tổng diện tích tiện ích</h3><p class="tabular">88,2 ha dành cho hạ tầng tiện ích chung.</p></div>
+        <div><h3>Pearl Garden — Công viên Đảo Ngọc</h3><p class="tabular">Quy mô 6.500 m², tổng diện tích tiện ích toàn dự án đạt 88,2 ha.</p></div>
       </div>
     </div>
   </div>
@@ -655,16 +737,45 @@
   </div>
 </section>
 
+<section id="faq">
+  <div class="section-head">
+    <p class="eyebrow">Giải đáp nhanh</p>
+    <h2>Câu hỏi thường gặp</h2>
+  </div>
+  <div class="faq">
+    <details>
+      <summary>Vinhomes Hải Vân Bay sở hữu theo hình thức nào?</summary>
+      <p>Toàn bộ sản phẩm thấp tầng tại dự án được cấp sổ đỏ lâu dài, không giới hạn thời hạn sở hữu.</p>
+    </details>
+    <details>
+      <summary>Dự án có quy mô bao nhiêu, gồm mấy phân khu?</summary>
+      <p>Tổng diện tích 512,16 ha, chia thành 4 phân khu: Bạch Vân, Vịnh Mây, Đảo Ngọc và Tinh Vân, mỗi khu mang một bản sắc kiến trúc riêng.</p>
+    </details>
+    <details>
+      <summary>Vinhomes Hải Vân Bay ở đâu?</summary>
+      <p>Dự án tọa lạc tại Vịnh Nam Chơn, chân đèo Hải Vân, quận Liên Chiểu, TP. Đà Nẵng — liền kề Cảng Liên Chiểu và cách trung tâm thành phố khoảng 15 phút di chuyển.</p>
+    </details>
+    <details>
+      <summary>Tiện ích nổi bật nhất của dự án là gì?</summary>
+      <p>VinWonders Hải Vân Bay — tổ hợp công viên chủ đề và trải nghiệm vận động mạo hiểm quy mô 24,8 ha, cùng chuỗi công viên, quảng trường biển trải dọc bờ vịnh.</p>
+    </details>
+    <details>
+      <summary>Khi nào Vịnh Mây chính thức mở bán?</summary>
+      <p>Chủ đầu tư chưa công bố ngày mở bán chính thức. Liên cập nhật trực tiếp ngay khi có thông tin — để lại số điện thoại để được ưu tiên thông báo sớm nhất.</p>
+    </details>
+  </div>
+</section>
+
 <section id="lienhe">
   <div class="contact">
     <div>
       <h2>Đặt lịch tham quan & nhận bảng giá</h2>
-      <p>Liên và đội ngũ hỗ trợ 24/7 các thông tin về quỹ căn, chính sách vàng, tiến độ thanh toán và cập nhật mở bán Vịnh Mây.</p>
+      <p>Liên và đội ngũ hỗ trợ 24/7 các thông tin về quỹ căn, chính sách bán hàng, tiến độ thanh toán và cập nhật mở bán Vịnh Mây.</p>
     </div>
     <div class="actions">
       <div class="phone tabular">0987 21 22 23</div>
       <div class="actions-row">
-        <a class="btn btn-gold" href="tel:0987212223">Gọi ngay</a>
+        <a class="btn btn-teal" href="tel:0987212223">Gọi ngay</a>
         <a class="btn btn-zalo" href="https://zalo.me/0987212223" target="_blank" rel="noopener">Nhắn Zalo</a>
         <a class="btn btn-line" href="https://www.facebook.com/mylien.nguyen.37" target="_blank" rel="noopener">Facebook</a>
       </div>
